@@ -31,3 +31,7 @@ alias py="python"
 alias py3="python3"
 alias py2="python2"
 alias pip="poetry"
+
+## POETRY
+
+source $HOME/.poetry/env
