@@ -8,9 +8,17 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 discord = "^1.0.1"
 python-dotenv = "^0.17.1"
+asyncio = "^3.4.3"
+uvicorn = "^0.14.0"
+fastapi = "^0.66.0"
+requests = "^2.26.0"
+Scrapy = "^2.5.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+
+[tool.poetry.scripts]
+app = 'bebot.app:bootstrap'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
