@@ -16,4 +16,4 @@ def getSololearnProfile(id: str):
     return json.loads(open('tmp/sl.json').read())[0]
 
 def bootstrap():
-    uvicorn.run('api.server:app', host='0.0.0.0', port=5000, reload=True)
+    uvicorn.run('api.server:app', host='0.0.0.0', port=5901, reload=True)
