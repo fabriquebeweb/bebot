@@ -1,3 +1,4 @@
+import json
 import scrapy
 from datetime import datetime
 
@@ -22,7 +23,7 @@ class CodecademySpider(scrapy.Spider):
         location = response.css('div[data-testid="role-section"] > p::text')
         bio = response.css('div[data-testid="bio-section"] > p::text')
 
-        yield {
+        return {
             'username': username.getall()[1] if username else None,
             'fullname': fullname.get() if fullname else None,
             'streaks': {

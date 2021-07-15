@@ -7,8 +7,8 @@ app = FastAPI()
 
 @app.get('/cc/{id}')
 def getCodecademyProfile(id: str):
-    return os.popen(f"scrapy parse https://www.sololearn.com/profile/{id} --spider=sololearn --nolog | grep '[{{.*}}]'").read()
-    
+    os.system(f'rm -f scrap/cc.json && scrapy parse https://www.codecademy.com/profiles/{id} --spider=codecademy -o scrap/cc.json:json')
+    return json.loads(open('scrap/cc.json').read())[0]
 
 @app.get('/sl/{id}')
 def getSololearnProfile(id: str):
